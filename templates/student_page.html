@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Details</title>
+    <link href="../static/css/student_page.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/"><img src="../static/images/logo.png"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="students" style="background-color: #fc5656; color: #fff;">Student</a></li>
+        <li><a href="faculty">Faculty</a></li>
+        <li><a href="input">Input</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <h1 style="font-size: 40px;color:white;margin-right: 15px;margin-top: 100px;">Student Details</h1>
+    
+    
+  
+    <form onsubmit="event.preventDefault();" role="search">
+      <label for="search">Search for stuff</label>
+      <input id="search" type="search" placeholder="Search..." autofocus required />
+      <button type="submit" class="search-button">Go</button>    
+    </form> 
+
+    
+    <div id="students-container" class="flex-container" style="text-align: center;">
+      <div class="flex-item">
+        <h2>Anish R Joishy</h2>
+        <h3>Roll No: 2022111014</h3>
+        <h3>email: anish.joishy@research.iiit.ac.in</h3>
+        <h3>contact: 8618250245</h3>
+        <h3>course: CSD</h3>
+        <h3>year: 1</h3>
+    
+      </div>
+      <div class="flex-item">
+        <h2>Aryaman Bahl</h2>
+        <h3>Roll No: 2022113010</h3>
+        <h3>email: aryaman.bahl@research.iiit.ac.in</h3>
+        <h3>contact: 7973967419</h3>
+        <h3>course: CND</h3>
+        <h3>year: 1</h3>
+      </div>
+      <div class="flex-item">
+        <h2>Mohak Somani</h2>
+        <h3>Roll No: 2022101088</h3>
+        <h3>email: mohak.somani@student.iiit.ac.in</h3>
+        <h3>contact: 9649349330</h3>
+        <h3>course: CSE</h3>
+        <h3>year: 1</h3>
+      </div>
+    </div>
+    
+    <script src="../static/js/student_faculty.js"></script>
+    
+    </body>
+    
+    </html>

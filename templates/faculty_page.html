@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Faculty Details</title>
+    <link href="../static/css/student_page.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/"><img src="../static/images/logo.png"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="students">Student</a></li>
+        <li><a href="faculty" style="background-color: #fc5656; color: #fff;">Faculty</a></li>
+        <li><a href="input">Input</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <h1 style="font-size: 40px;color:white;margin-right: 15px;margin-top: 100px;">Faculty Details</h1>
+
+    <div >
+      <form onsubmit="event.preventDefault();" role="search">
+        <label for="search">Search for stuff</label>
+        <input id="search" type="search" placeholder="Search..." autofocus required />
+        <button type="submit" class="search-button" >Go</button>
+      </form>
+    </div>
+
+
+    <div class="flex-container" style="text-align: center;">
+      <div class="flex-item" >
+        <h2>Student 1</h2>
+        <ul>
+          <li>Name: John Doe</li>
+          <li>post: 20</li>
+          <li>qualification: Computer Science</li>
+          <li>lab: 3.5</li>
+          <li>email: 3.5</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var data = [
+        {% for item in data %}
+      "{{ item }}",
+        {% endfor %}
+        ];
+      console.log(data);
+      container=document.querySelector('.flex-container');
+      container.innerHTML='';
+      for(let i=0;i<data.length;i++)
+      {
+        name=data[i].split(';--')[0];
+        post = data[i].split(';--')[1];
+        quali = data[i].split(';--')[2];
+        lab = data[i].split(';--')[3];
+        email = data[i].split(';--')[4];
+        con= data[i].split(';--')[5];
+
+        container.innerHTML+=`<div class="flex-item" >
+        <h2>${name}</h2>
+        <ul>
+          <li>post: ${post}</li>
+          <li>qualification: ${quali}</li>
+          <li>lab: ${lab}</li>
+          <li>email: ${email}</li>
+          <li>contact: ${con}</li>
+        </ul>
+      </div>`
+      }
+    </script>
+    <script src="../static/js/student_faculty.js"></script>
+
+
+  </body>
+</html>
